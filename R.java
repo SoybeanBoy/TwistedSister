@@ -8,7 +8,7 @@ public class R{
     System.out.printf("%nYou are about to embark on a journey through a day in the life of R Matthews. Let's go!%n%n");
     String shirt = dressShirt();
     String pants = dressPants();
-    points=Trivia.play()+recitation.RecitationPoint()+StopMotion.thirdGame();
+    points=Trivia.play()+recitation.RecitationPoint();
     Outcomes.outcome(points);
   }
 
