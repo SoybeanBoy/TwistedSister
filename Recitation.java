@@ -52,10 +52,10 @@ Those methods are written for getting the point by doing the recitation part
 
   public static int PointForRecitationQuestion(int answer){
     if(answer==50){
-      return 100;
+      return 1;
     }
     else{
-      return 10;
+      return 0;
     }
   }
 
