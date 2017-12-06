@@ -32,8 +32,9 @@ public class StopMotion {
   @return an integer for the amount of points that contributes towards
   the endgame result
   */
-  public static int dancing(int points){
+  public static int dancing(){
     Scanner sc = new Scanner(System.in);
+    int points = 0;
     boolean dance = true;
     boolean ready2 = true;
 		int i = 0;
@@ -59,7 +60,7 @@ public class StopMotion {
 			}
 			if (i==10){
 				ready2 = false;
-        points = points + 1;
+        			points = 1;
 			} else if (j==3){
         System.out.println("You have failed the dance routine too many times. You have brought disgrace to Stop Motion.");
 				ready2 = false;
