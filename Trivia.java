@@ -4,7 +4,7 @@ public class Trivia{
 
   static boolean result=true;//the result is used to keep track that if the user get all the answeres right.
 
-  public static int play(int point){
+  public static int play(){
     boolean[] category= new boolean[3];//this array is used to keep a record of which category has been asked.
 
     String[] name={"Math","Spongebob quotes","R's sophomore dorm video"};//and this array holds the names for all categories.
@@ -34,10 +34,10 @@ public class Trivia{
     }
     if (result){
       System.out.printf("%n%nYou win!!%nGo on with your life! Good luck~~");
-      return point+1;
+      return 1;
     }else{
       System.out.printf("%n%nYou lose... Good luck there lol");
-      return point;
+      return 0;
     }
   }
 

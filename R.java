@@ -3,10 +3,13 @@ import java.util.Scanner;
 public class R{
 
   public static void main(String[] args){
-    int outcome = 0;
+    int points = 0;//keep track of the endings
+
     System.out.printf("%nYou are about to embark on a journey through a day in the life of R Matthews. Let's go!%n%n");
     String shirt = dressShirt();
     String pants = dressPants();
+    points=Trivia.play()+recitation.RecitationPoint()+StopMotion.thirdGame();
+    Outcomes.outcome(points);
   }
 
   // R selects his shirt
@@ -33,4 +36,6 @@ public class R{
     }
     return pants[choice-1];
   }
+
+
 }
