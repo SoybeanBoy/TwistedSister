@@ -4,16 +4,17 @@ public class Trivia{
 
   static boolean result=true;//the result is used to keep track that if the user get all the answeres right.
 
-  public static void main(String[] args){
+  public static int play(int point){
     boolean[] category= new boolean[3];//this array is used to keep a record of which category has been asked.
 
     String[] name={"Math","Spongebob quotes","R's sophomore dorm video"};//and this array holds the names for all categories.
 
-    System.out.printf("Hello R! This is NO ONE.%n%nAnd I am offering you a nice deal!%n%nI will give you a TRIVIA.%n%nIf you win, you will get 1000 dollars.%n%nIf you lose, something will happen. Don't worry. It may not be that bad lol!%");
+    System.out.printf("Hello R! This is NO ONE.%n%nAnd I am offering you a nice deal!%n%nI will give you a TRIVIA.%n%nIf you win, you will get 1000 dollars.%n%nIf you lose, something will happen. Don't worry. It may not be that bad lol!%n");
+    boolean choice;
 
     do{
       System.out.printf("%n%nWILL YOU TAKE THE CHALLENGE? >");
-      boolean choice=TextIO.getlnBoolean();
+      choice=TextIO.getlnBoolean();
     }while (!choice);//be presistent and force the user to take the challenge.
 
     for (int i=0;i<3;i++){//three questions in all will be asked.
@@ -33,8 +34,11 @@ public class Trivia{
     }
     if (result){
       System.out.printf("%n%nYou win!!%nGo on with your life! Good luck~~");
+      return point+1;
+    }else{
+      System.out.printf("%n%nYou lose... Good luck there lol");
+      return point;
     }
-    System.out.printf("%n%nYou lose... Good luck there lol");
   }
 
   /**
