@@ -28,6 +28,7 @@ public class StopMotion {
 		}
   }
   /** a method for the timed dancing game for R
+  @param points the amount of points initially going in that affects the endgame result.
   @return an integer for the amount of points that contributes towards
   the endgame result
   */
