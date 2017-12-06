@@ -9,7 +9,9 @@ public class Trivia{
 
     String[] name={"Math","Spongebob quotes","R's sophomore dorm video"};//and this array holds the names for all categories.
 
-    System.out.printf("Hello R! This is NO ONE.%n%nAnd I am offering you a nice deal!%n%nI will give you a TRIVIA.%n%nIf you win, you will get 1000 dollars.%n%nIf you lose, something will happen. Don't worry. It may not be that bad lol!%n");
+    System.out.printf("%nAfter selecting his outfit for the day, R hears a voice in his head... it says:%n");
+
+    System.out.printf("%nHello R! This is NO ONE.%nAnd I am offering you a nice deal!%nI will give you a TRIVIA.%nIf you win, you will get 1000 dollars.%nIf you lose, something will happen. Don't worry. It may not be that bad lol!%n");
     boolean choice;
 
     do{
@@ -18,7 +20,7 @@ public class Trivia{
     }while (!choice);//be presistent and force the user to take the challenge.
 
     for (int i=0;i<3;i++){//three questions in all will be asked.
-      System.out.printf("Great!Now you have %d categories left%n",3-i);
+      System.out.printf("%nGreat! Now you have %d categories left%n",3-i);
 
       for (int j=0;j<3;j++){//print out the categories that have not been asked.
         if (!category[j]) {System.out.printf("%d. %s%n",j+1,name[j]);}
@@ -33,10 +35,10 @@ public class Trivia{
       //ask the question, get the answer and check it.
     }
     if (result){
-      System.out.printf("%n%nYou win!!%nGo on with your life! Good luck~~");
+      System.out.printf("%n%nYou win!!%nGo on with your life! Good luck~~%n");
       return 1;
     }else{
-      System.out.printf("%n%nYou lose... Good luck there lol");
+      System.out.printf("%n%nYou didn't get all the answers right. You lose... Good luck out there lol%n%n");
       return 0;
     }
   }
@@ -59,15 +61,15 @@ public class Trivia{
 
   public static void math(){
     String question=pickRandom(mathQuestion);
-    System.out.printf("Welcome to the Math category.%n Here is the question:%n%s%nPlease enter your answer(Just the number please) >",question);
+    System.out.printf("%nWelcome to the Math category.%n Here is the question:%n%s%nPlease enter your answer(Just the number please) >",question);
     int answer=TextIO.getlnInt();
     for (int i=0;i<mathQuestion.length;i++){
       if (question.equals(mathQuestion[i])){
         if (answer==mathAnswer[i]){
-          System.out.printf("OMG YOU ARE A GENIUS! You got it RIGHT!");
+          System.out.printf("%nOMG YOU ARE A GENIUS! You got it RIGHT!");
         }else {
           result=false;//once the user get it wrong, the result turns to false, which means the user loses.
-          System.out.printf("Nahh...%nThe answer is %d%nTry harder next time please lol.",mathAnswer[i]);
+          System.out.printf("%nNahh...%nThe answer is %d%nTry harder next time please lol.%n",mathAnswer[i]);
         }
       }
     }
@@ -92,15 +94,15 @@ public class Trivia{
 
   public static void spongeBob(){
     String question=pickRandom(spongeBobQuestion);
-    System.out.printf("Welcome to the SpongeBob category.%n Here is the question:%n%s%nPlease enter your answer >",question);
+    System.out.printf("%nWelcome to the SpongeBob category.%n Here is the question:%n%s%nPlease enter your answer >",question);
     String answer=TextIO.getln();
     for (int i=0;i<spongeBobQuestion.length;i++){
       if (question.equals(spongeBobQuestion[i])){
         if (answer.equals(spongeBobAnswer[i])){
-          System.out.printf("OMG YOU ARE A GENIUS! You got it RIGHT!");
+          System.out.printf("%nOMG YOU ARE A GENIUS! You got it RIGHT!");
         }else {
           result=false;
-          System.out.printf("Nahh...%nThe right answer is %s.%nTry harder next time please lol.",spongeBobAnswer[i]);
+          System.out.printf("%nNahh...%nThe right answer is %s.%nTry harder next time please lol.%n",spongeBobAnswer[i]);
         }
       }
     }
@@ -122,7 +124,7 @@ public class Trivia{
     "Spongebob",
     "Squidward",
     "Sandy",
-    "Mr.Krabs",
+    "Mr. Krabs",
     "Gary"
   };
 
@@ -132,13 +134,13 @@ public class Trivia{
 
   public static void r(){
     String question="What was the name of the song in R's winter sophomore dorm video?";
-    System.out.printf("Welcome to the R category. It is a question about you! I am sure it will be pretty easy right?%n Here is the question:%n%s%nPlease enter your answer >",question);
+    System.out.printf("%nWelcome to the R category. It is a question about you! I am sure it will be pretty easy right?%n Here is the question:%n%s%nPlease enter your answer >",question);
     String answer=TextIO.getln();
     if (answer.equals("Minnesota")|| answer.equals("minnesota")){
-      System.out.printf("OMG YOU ARE A GENIUS! You got it RIGHT!");
+      System.out.printf("%nOMG YOU ARE A GENIUS! You got it RIGHT!");
     }else {
       result=false;
-      System.out.printf("Nahh...%nThe answer is Minnesota%nTry harder next time please lol.");
+      System.out.printf("%nNahh...%nThe answer is Minnesota%nTry harder next time please lol.");
     }
   }
 

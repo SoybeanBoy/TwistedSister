@@ -8,11 +8,12 @@ public class R{
     System.out.printf("%nYou are about to embark on a journey through a day in the life of R Matthews. Let's go!%n%n");
     String shirt = dressShirt();
     String pants = dressPants();
-    points=Trivia.play()+recitation.RecitationPoint();
+    points = Trivia.play() + Recitation.RecitationPoint() + StopMotion.dancing() + Shower.fix();
     Outcomes.outcome(points);
   }
 
-  // R selects his shirt
+  // R selects his shirt. this doesnt actually have to return String
+  // we were thinking about using the string later in the story but that never happened
   public static String dressShirt(){
     Scanner input = new Scanner(System.in);
     System.out.println("R opens his closet to select a shirt. His options are:");

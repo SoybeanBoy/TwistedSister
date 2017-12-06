@@ -7,7 +7,7 @@ public class StopMotion {
     System.out.print("After treading down the hills of Brandeis, R arrived at Gosman to begin his training with his fellow dancers. \n");
     System.out.print("'Alright, let's get this practice done right people!' said R in a tired yet enthusiastic voice.\n");
     System.out.print("However, every good leader must be able to do what they teach. Therefore, you must help R perfect his dance routine\n");
-    System.out.print("To perfect his dance routine, you must press the corresponding letters 'w' 'a' 's' or 'd' as they appear on the screen.\n");
+    System.out.print("To perfect his dance routine, you must press the corresponding letters 'w' 'a' 's' or 'd' as they appear on the screen and press ENTER.\n");
     System.out.println("Type the wrong letter and you mess up the dance. Take too long to type and you ruin the dance by being a slowpoke and bringing the team down.");
     System.out.println("Type 'yes' when you are ready");
   }
@@ -28,12 +28,12 @@ public class StopMotion {
 		}
   }
   /** a method for the timed dancing game for R
-  @param points the initial points value going in that affects the endgame result
   @return an integer for the amount of points that contributes towards
   the endgame result
   */
-  public static int dancing(int points){
+  public static int dancing(){
     Scanner sc = new Scanner(System.in);
+    int points =  0;
     boolean dance = true;
     boolean ready2 = true;
 		int i = 0;
@@ -59,10 +59,12 @@ public class StopMotion {
 			}
 			if (i==10){
 				ready2 = false;
+        System.out.println("You nailed it!!\n\n");
         points = 1;
 			} else if (j==3){
-        System.out.println("You have failed the dance routine too many times. You have brought disgrace to Stop Motion.");
+        System.out.println("You have failed the dance routine too many times. You have brought disgrace to Stop Motion. Practice is over\n\n");
 				ready2 = false;
+        points = 0;
 			} else {
 				String red2 = sc.nextLine();
 				while (!red2.equals("yes")){
@@ -86,7 +88,7 @@ public class StopMotion {
   int points = 0;
   description();
   readyCheck();
-  points = dancing(points);
+  points = dancing();
   return points;
 }
 }
