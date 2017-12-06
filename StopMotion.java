@@ -3,7 +3,7 @@ public class StopMotion {
   /** a description of the game about to be played
   */
   public static void description(){
-    System.out.print("The shower had been a worthy opponent for R this day, but now it was time for Stop Motion practice.\n");
+    System.out.print("Recitation had been a worthy opponent for R this day, but now it was time for Stop Motion practice.\n");
     System.out.print("After treading down the hills of Brandeis, R arrived at Gosman to begin his training with his fellow dancers. \n");
     System.out.print("'Alright, let's get this practice done right people!' said R in a tired yet enthusiastic voice.\n");
     System.out.print("However, every good leader must be able to do what they teach. Therefore, you must help R perfect his dance routine\n");
@@ -59,7 +59,7 @@ public class StopMotion {
 			}
 			if (i==10){
 				ready2 = false;
-        points = points + 100;
+        points = points + 1;
 			} else if (j==3){
         System.out.println("You have failed the dance routine too many times. You have brought disgrace to Stop Motion.");
 				ready2 = false;
@@ -81,5 +81,11 @@ public class StopMotion {
   */
 	private static long getSecs() { // Gets the time in milliseconds instead of nanoseconds
 		return System.nanoTime() / 1000000;
+	}
+	public static int thirdGame(int points){
+		description();
+		readyCheck();
+		points = dancing(points);
+		return points;
 	}
 }
