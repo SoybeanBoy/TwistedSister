@@ -1,20 +1,8 @@
-/**
-Here is the main method I used to check if the method could run
-Delete it when compile the methods to the program.
-*/
+public class recitation{
 
-public class Recitation{
-  public static void main(String[] args){
-      MakePPT();
-      int pointnow= RecitationPoint();
-      System.out.print(pointnow);
-  }
-
-//Here are the methods of actual recitation part
-
-/**
-This method is the loop that ask R to make the PPT
-*/
+  /**
+  This method is the loop that ask R to make the PPT
+  */
   public static void MakePPT(){
     System.out.println("Am I going to make ppt for the recitation...?");
     boolean make=TextIO.getlnBoolean();
@@ -52,11 +40,11 @@ Those methods are written for getting the point by doing the recitation part
 
   public static int PointForRecitationQuestion(int answer){
     if(answer==50){
-      return 1;
+      return 100;
     }
     else{
-      return 0;
+      return 10;
     }
   }
 
-}//delete this bracket. Mind that those methods should be put inside the brackets that indicates the end of the CLASS
+}
