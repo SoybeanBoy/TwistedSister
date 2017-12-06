@@ -19,6 +19,7 @@ Those methods are written for getting the point by doing the recitation part
 @return an integer that stands for the point that R got from recitation
 */
   public static int RecitationPoint(){
+    MakePPT();
     System.out.println("Okayyyy let the recitation begin!!!!!");
     System.out.println("Anyone wants to answer the question?");
     boolean anyone=TextIO.getlnBoolean();
