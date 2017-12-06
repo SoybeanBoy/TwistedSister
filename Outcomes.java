@@ -1,7 +1,7 @@
 public class Outcomes{
   public static void outcome(int points){
     System.out.println("'Wow' said R");
-    if (points==0 or points==1){
+    if (points==0 || points==1){
       terribleOutcome();
     } else if (points==2){
       badOutcome();
