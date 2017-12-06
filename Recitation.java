@@ -1,5 +1,7 @@
-//Here is the main method I used to check if the method could run
-//Delete it when compile the methods to the program.
+/**
+Here is the main method I used to check if the method could run
+Delete it when compile the methods to the program.
+*/
 
 public class Recitation{
   public static void main(String[] args){
@@ -10,7 +12,9 @@ public class Recitation{
 
 //Here are the methods of actual recitation part
 
-//This method is the loop that ask R to make the PPT
+/**
+This method is the loop that ask R to make the PPT
+*/
   public static void MakePPT(){
     System.out.println("Am I going to make ppt for the recitation...?");
     boolean make=TextIO.getlnBoolean();
@@ -22,7 +26,10 @@ public class Recitation{
     System.out.println("Alright...let me get it finished.");
    }
 
-//Those methods would finally return the integer that stands for the point that R got from recitation
+/**
+Those methods are written for getting the point by doing the recitation part
+@return an integer that stands for the point that R got from recitation
+*/
   public static int RecitationPoint(){
     System.out.println("Okayyyy let the recitation begin!!!!!");
     System.out.println("Anyone wants to answer the question?");
