@@ -2,30 +2,34 @@ import java.util.Random;
 
 public class Trivia{
 
-  static boolean result=true;
+  static boolean result=true;//the result is used to keep track that if the user get all the answeres right.
 
   public static void main(String[] args){
-    boolean[] category= new boolean[3];
-    String[] name={"Math","Spongebob quotes","R's sophomore dorm video"};
+    boolean[] category= new boolean[3];//this array is used to keep a record of which category has been asked.
+
+    String[] name={"Math","Spongebob quotes","R's sophomore dorm video"};//and this array holds the names for all categories.
 
     System.out.printf("Hello R! This is NO ONE.%n%nAnd I am offering you a nice deal!%n%nI will give you a TRIVIA.%n%nIf you win, you will get 1000 dollars.%n%nIf you lose, something will happen. Don't worry. It may not be that bad lol!%");
 
     do{
       System.out.printf("%n%nWILL YOU TAKE THE CHALLENGE? >");
       boolean choice=TextIO.getlnBoolean();
-    }while (!choice);
+    }while (!choice);//be presistent and force the user to take the challenge.
 
-    for (int i=0;i<3;i++){
+    for (int i=0;i<3;i++){//three questions in all will be asked.
       System.out.printf("Great!Now you have %d categories left%n",3-i);
-      for (int j=0;j<3;j++){
+
+      for (int j=0;j<3;j++){//print out the categories that have not been asked.
         if (!category[j]) {System.out.printf("%d. %s%n",j+1,name[j]);}
       }
+
       System.out.printf("Please enter the category you wanna answer now >:");
       int a1=TextIO.getlnInt();
       category[a1-1]=true;
       if (a1==1) math();
       if (a1==2) spongeBob();
       if (a1==3) r();
+      //ask the question, get the answer and check it.
     }
     if (result){
       System.out.printf("%n%nYou win!!%nGo on with your life! Good luck~~");
@@ -44,6 +48,10 @@ public class Trivia{
     return list[k];
   }
 
+  /**
+    asks the Math category questions and checks the answers for it.
+  */
+
 
   public static void math(){
     String question=pickRandom(mathQuestion);
@@ -54,7 +62,7 @@ public class Trivia{
         if (answer==mathAnswer[i]){
           System.out.printf("OMG YOU ARE A GENIUS! You got it RIGHT!");
         }else {
-          result=false;
+          result=false;//once the user get it wrong, the result turns to false, which means the user loses.
           System.out.printf("Nahh...%nThe answer is %d%nTry harder next time please lol.",mathAnswer[i]);
         }
       }
@@ -73,6 +81,10 @@ public class Trivia{
     -7,
     4
   };
+
+  /**
+  asks the Spongebob category questions and checks the answers for it.
+  */
 
   public static void spongeBob(){
     String question=pickRandom(spongeBobQuestion);
@@ -109,6 +121,10 @@ public class Trivia{
     "Mr.Krabs",
     "Gary"
   };
+
+/**
+  asks the R category questions and checks the answers for it.
+*/
 
   public static void r(){
     String question="What was the name of the song in R's winter sophomore dorm video?";
